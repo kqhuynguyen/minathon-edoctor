@@ -1,0 +1,71 @@
+[
+    {
+        "name": " Bác sĩ, Giáo sư, Tiến sĩ Nguyễn Thanh Liêm " ,
+        "role": [
+            "Tổng giám đốc tại Bệnh viện Đa khoa Quốc tế Vinmec Times City",
+            "Giám đốc tại Trung tâm tế bào gốc và Công nghệ Gen",
+            "Giám đốc tại Phòng khám Đa khoa Vietclinic",
+            "Nguyên giám đốc Bệnh viện Nhi Trung ương",
+            "Bác sĩ khoa Tiết chế - Bệnh viện Nhi Trung ương",
+            "Bác sĩ tại Hoàng Gia Spa",
+            "Đồng Chủ tịch Ủy ban nghiên cứu Hiệp hội phẫu thuật Nội soi Nhi khoa quốc tế (IPEG)",
+            "Chủ tịch Hội phẫu thuật Nhi khoa Việt Nam",
+            "Phó Chủ tịch Hội phẫu thuật Nhi khoa Châu Á"
+        ],
+        "photo": "https://dwbxi9io9o7ce.cloudfront.net/images/2015-11-19_170611.4983330000.jpeg",
+        "falcuty": [
+            "Nội Cơ Xương Khớp",
+            "Nội Thần kinh",
+            "Nội Tiêu hoá - Gan mật",
+            "Nội Tim mạch",
+            "Nội Hô hấp",
+            "Nội tiết"
+        ],
+        "introduce":"Bác sĩ Nguyễn Thanh Liêm là người đầu tiên thực hiện phẫu thuật nội soi trẻ em tại Việt Nam và khu vực. Ông đã đóng góp 9 kĩ thuật mổ nội soi nhi khoa hoàn toàn mới cho phẫu thuật nội soi nhi khoa quốc tế trong các lĩnh vực phẫu thuật tiết niệu, tiêu hóa và lồng ngực. Giáo sư Nguyễn Thanh Liêm là chuyên gia hàng đầu thế giới trong lĩnh vực phẫu thuật nội soi nang ống mật chủ (thực hiện gần 600 trường hợp) và bệnh thoát vị cơ hoành bẩm sinh( thực hiện hơn 300 trường hợp). Ông cũng là một trong các chuyên gia hàng đầu của thế giới về phẫu thuật dị tật không có hậu môn và bệnh phình đại tràng bẩm sinh. Ông đã được mời đi giảng bài và phẫu thuật trình diễn tại nhiều nước trên thế giới : Mỹ, Pháp, Italia, Nhật Bản, Hàn Quốc, Úc, Ấn Độ, Nga, Malaysia, Philipine, Indonesia, Thái Lan, Đài Loan. Nhiều giáo sư, bác sỹ từ châu Á, châu Âu, Hoa Kì đã đến Việt Nam học tập phẫu thuật nội soi với giáo sư Nguyễn Thanh Liêm.",
+        "workplace":[
+            "Bệnh viện Đa khoa Quốc tế Vinmec - Cơ sở Minh Khai",
+            " Phòng khám Đa khoa Quốc tế Vietclinic ",
+            " Khoa Nhi - Bệnh viện Đa khoa Quốc tế Vinmec - Cơ sở Minh Khai ",
+            " Khoa Tiết chế - Bệnh viện Nhi Trung ương ",
+            " Phòng khám 32 Vạn Bảo - Hoàng Gia Spa ",
+            " Phòng Khám 10A Hà Đông - Hoàng Gia Spa "
+        ],
+        "experience": [
+            "Bệnh viện Nhi Trung ương",
+            "Bệnh viện Đa khoa Quốc tế Vinmec",
+            "Phòng khám Đa khoa Vietclinic"
+        ],
+        "office_address":[
+            "458 Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội",
+            " 21 Nguyễn Công Hoan, Ngọc Khánh, Ba Đình, Hà Nội"
+        ]
+
+    },
+    {
+        "name": " Bác sĩ, Thạc sĩ Trà Anh Duy ",
+        "role": [
+            "Bác sĩ tại khoa Nam khoa - Bệnh viện Bình Dân thành phố Hồ Chí Minh",
+            "Bác sĩ tại Trung tâm sức khỏe Nam giới - Men's Health"
+        ],
+        "photo": "https://dwbxi9io9o7ce.cloudfront.net/images/28_03_2017_08_25_12_451408.jpeg",
+        "falcuty": [
+            "Nam khoa",
+            "Hiếm muộn - Vô sinh"
+        ],
+        "introduce":"Thạc sĩ, bác sĩ Trà Anh Duy là một trong những bác sĩ Nam khoa đầu ngành với một nền tảng cực kỳ vững chắc về chuyên môn cũng như lối tư duy thực tế, sáng tạo. Ngoài ra trên phương diện quản lý, bác sĩ Duy đã trải qua các vị trí lãnh đạo về quản trị chất lượng, chăm sóc khách hàng, phát triển thương hiệu và công tác xã hội.",
+        "workplace":[
+            " Khoa Nam khoa - Bệnh viện Bình Dân ",
+            " Trung tâm sức khỏe Nam giới Men's Health "
+        ],
+        "experience": [
+            "Khoa Nam khoa - Bệnh viện Bình Dân thành phố Hồ Chí Minh",
+            "Trung tâm sức khỏe Nam giới Men's Health"
+
+        ],
+        "office_address":[
+            " 408 Điện Biên Phủ, 11, Quận 10, Hồ Chí Minh",
+            " 7B/31 Thành Thái, 14, Quận 10, Hồ Chí Minh"
+        ]
+        
+     }
+]
