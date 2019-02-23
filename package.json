@@ -23,6 +23,7 @@
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
     "nodemon": "^1.8.1"
   }
 }

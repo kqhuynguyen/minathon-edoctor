@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/edoctor');
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
@@ -13,5 +12,5 @@ const AppointmentSchema = new Schema({
 });
 
 
-const Appointment = mongoose.model('appointment', AppointmentSchema,'appointment');
+const Appointment = mongoose.model('appointment', AppointmentSchema);
 module.exports = Appointment;
