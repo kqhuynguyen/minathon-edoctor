@@ -9,6 +9,7 @@ const logger = require('koa-logger')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const doctors = require('./routes/doctors')
+const diseases=require('./routes/diseases');
 const appointments = require('./routes/appointments')
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/edoctor');
@@ -41,7 +42,7 @@ app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(appointments.routes(), appointments.allowedMethods())
 app.use(doctors.routes(), doctors.allowedMethods())
-
+app.use(diseases.routes(), diseases.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
