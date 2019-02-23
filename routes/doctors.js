@@ -1,10 +1,10 @@
 
 
 const router = require('koa-router')();
-const mongoose = require('mongoose');
 const Doctor = require('../models/doctor');
 
 router.prefix('/doctors')
+
 
 router.get('/', async (ctx, next) => {
   await Doctor.find({}, function(err, doctors) {
@@ -12,24 +12,57 @@ router.get('/', async (ctx, next) => {
   });
 })
 
-router.get('/conditions', async (ctx, next) => {
-  // big assumption: missing any of these fields won't cause it to crash
-  let conditions = {};
-  conditions.name = ctx.query.name; 
-  conditions.faculty = ctx.query.faculty; // assumption: query is in ctx
-  if (!conditions) {
-    ctx.throw(400);
-  }
-  Doctor.find(conditions, function(err, doctors) {
-    ctx.body = doctors;
+router.get('/id/:id', async (ctx, next) => {
+  let id = ctx.params.id;l
+  await Doctor.findById(id, function(err, doctor) {
+    if (err) {
+      console.log(err);
+      ctx.throw(400);
+    }
+    ctx.body = doctor;0
   });
 })
 
-router.get('/id/:id', async (ctx, next) => {
-  let id = ctx.params.id;
-  Doctor.findById(id, function(err, doctor) {
-    ctx.body = doctor;
-  });
-})
+
+
+router.get('/who', async (ctx, next) => {
+  let keyword = ctx.query.keyword;
+  if (!keyword) {
+    ctx.throw(400, "keyword required");
+  }
+  let regex = new RegExp(keyword,'i');
+  await Doctor.find().or([
+    { 'faculty': regex },
+    { 'name': regex },
+    { 'role': regex },
+    { 'introduce': regex },
+    { 'workplace': regex },
+    { 'experience': regex },
+    { 'office_address': regex },
+  ])
+    .then(docs => {
+      ctx.body = docs;
+    })
+    .catch(error => {
+      console.log(err);
+      ctx.throw(400);
+    })
+});
+
+
+router.get('/who/faculty', async (ctx, next) => {
+  let keyword = ctx.query.keyword;
+  let regex = new RegExp(keyword,'i');
+  await Doctor.find({
+    'faculty': regex
+  })
+    .then(docs => {
+      ctx.body = docs;
+    })
+    .catch(error => {
+      console.log(err);
+      ctx.throw(400);
+    })
+});
 
 module.exports = router
