@@ -10,5 +10,5 @@ const FalcutySchema = new Schema({
 });
 
 
-const Falcuty = mongoose.model('falcuty', FalcutySchema);
+const Falcuty = mongoose.model('falcuties', FalcutySchema);
 module.exports = Falcuty;

@@ -10,20 +10,22 @@ router.prefix('/falcuties')
 
 //tim theo trieu chung
 router.get('/', async (ctx, next) => {
-  const chuyenkhoa=ctx.query.name;
-  const regex=new RegExp(chuyenkhoa, 'i');
-  let falcuties=null;
-  let falcutyID=null;
-  falcuties=await Falcuty.find({})
-                .select('id');
-  falcutyID=await falcuties.map(obj=>obj.id);
+  await Falcuty.find({}, function(err, falcuties) {
+    ctx.body = falcuties;
+  });
+  // const chuyenkhoa=ctx.query.name;
+  // const regex=new RegExp(chuyenkhoa, 'i');
+  // let falcuties=null;
+  // let falcutyID=null;
+  // falcuties=await Falcuty.find({});
+  // falcutyID=await falcuties.map(obj=>obj._id);
 
-    const doctors=await Doctor
-            .find({falcuty:{$elemMatch:{$in:falcutyID} }})
-            .populate('keys','name')
-            .exec();
+  //   const doctors=await Doctor
+  //           .find({falcuty:{$elemMatch:{$in:falcutyID} }})
+  //           .populate('keys','name')
+  //           .exec();
 
-  ctx.body=doctors;
+  // ctx.body=falcuties;
 })
 //tim theo chuyen khoa
 

@@ -9,9 +9,9 @@ const DiseaseSchema = new Schema({
   introduce:String,
   symptom:[String],
   falcuty:String,
-  falcutyID:String
+  falcutyID:[{type:ObjectId,ref:'falcuties'}]
 });
 
 
-const Disease = mongoose.model('disease', DiseaseSchema);
+const Disease = mongoose.model('diseases', DiseaseSchema);
 module.exports = Disease;
