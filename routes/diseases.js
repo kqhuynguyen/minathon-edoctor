@@ -18,11 +18,9 @@ router.get('/', async (ctx, next) => {
                   .select('falcutyID')
     falcutyID=await falcuties.map(obj=>obj.falcutyID);
 
-
-
     const doctors=await Doctor
             .find({falcuty:{$elemMatch:{$in:falcutyID} }})
-            .populate('keys','name')
+            .populate()
             .exec();
 
   ctx.body=doctors;
