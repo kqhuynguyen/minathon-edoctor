@@ -25,5 +25,5 @@ DoctorSchema.virtual('keys',
   }
 )
 DoctorSchema.set('toObject', { virtuals: true });
-const Doctor = mongoose.model('doctor', DoctorSchema,'doctor');
+const Doctor = mongoose.model('doctor', DoctorSchema);
 module.exports = Doctor;
