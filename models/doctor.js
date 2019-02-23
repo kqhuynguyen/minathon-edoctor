@@ -15,16 +15,15 @@ const DoctorSchema = new Schema({
   office_address: [String],
   ratings: {
     num: Number,
-    avg: Number,
+    avg: Number
   },
   feedbacks: [
     {
-      patientId: {type: ObjectId, ref: "patients"},
-      content: String,
+      patientId: { type: ObjectId, ref: 'Patient' },
+      content: String
     }
   ]
 });
-
 
 
 const Doctor = mongoose.model('doctors', DoctorSchema);
