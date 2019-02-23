@@ -13,7 +13,17 @@ const DoctorSchema = new Schema({
   workplace: [String],
   experience: [String],
   office_address: [String],
-  });
+  ratings: {
+    num: Number,
+    avg: Number,
+  },
+  feedbacks: [
+    {
+      patientId: {type: Schema.Types.ObjectId, ref: "patient"},
+      content: String,
+    }
+  ]
+});
 
 
 DoctorSchema.virtual('keys',
