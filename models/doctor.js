@@ -8,23 +8,22 @@ const DoctorSchema = new Schema({
   name: String,
   role: [String],
   photo: String,
-  faculty: [{type:ObjectId, ref: 'falcuties'}],
+  falcuty: [{ type: ObjectId, ref: 'Falcuty' }],
   introduce: String,
   workplace: [String],
   experience: [String],
   office_address: [String],
   ratings: {
     num: Number,
-    avg: Number,
+    avg: Number
   },
   feedbacks: [
     {
-      patientId: {type: ObjectId, ref: "patients"},
-      content: String,
+      patientId: { type: ObjectId, ref: 'Patient' },
+      content: String
     }
   ]
 });
-
 
 
 const Doctor = mongoose.model('doctors', DoctorSchema);

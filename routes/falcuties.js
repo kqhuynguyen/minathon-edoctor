@@ -3,14 +3,15 @@
 const router = require('koa-router')();
 const mongoose = require('mongoose');
 const Doctor = require('../models/doctor');
-const Disease=require('../models/disease');
-const Falcuty=require('../models/falcuty');
-router.prefix('/falcuties')
+const Disease = require('../models/disease');
+const Falcuty = require('../models/falcuty');
+
+router.prefix('/falcuties');
 
 
-//tim theo trieu chung
+// tim theo trieu chung
 router.get('/', async (ctx, next) => {
-  await Falcuty.find({}, function(err, falcuties) {
+  await Falcuty.find({}, (err, falcuties) => {
     ctx.body = falcuties;
   });
   // const chuyenkhoa=ctx.query.name;
@@ -26,7 +27,7 @@ router.get('/', async (ctx, next) => {
   //           .exec();
 
   // ctx.body=falcuties;
-})
-//tim theo chuyen khoa
+});
+// tim theo chuyen khoa
 
-module.exports = router
+module.exports = router;

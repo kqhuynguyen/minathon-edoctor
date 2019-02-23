@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
+const ObjectId = Schema.Types.ObjectId;
 
 const FalcutySchema = new Schema({
   _id: ObjectId,
-  name:String,
-  id:String
+  name: String,
+  id: String
 });
 
 
-const Falcuty = mongoose.model('falcuties', FalcutySchema);
+const Falcuty = mongoose.model('Falcuty', FalcutySchema);
 module.exports = Falcuty;
