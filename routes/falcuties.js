@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Doctor = require('../models/doctor');
 const Disease=require('../models/disease');
 const Falcuty=require('../models/falcuty');
-router.prefix('/diseases')
+router.prefix('/falcuties')
 
 
 //tim theo trieu chung
