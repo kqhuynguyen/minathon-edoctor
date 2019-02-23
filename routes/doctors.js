@@ -64,7 +64,7 @@ router.get('/who/faculty', async (ctx, next) => {
 
     const doctors=await Doctor
             .find({falcuty:{$elemMatch:{$in:falcutyID} }})
-            .populate('falcuty', '_id');
+            .populate('falcuty');
 
   ctx.body=doctors;
 });

@@ -8,7 +8,7 @@ const DoctorSchema = new Schema({
   name: String,
   role: [String],
   photo: String,
-  faculty: [{type:ObjectId, ref: 'falcuties'}],
+  falcuty: [{type:ObjectId, ref: 'falcuties'}],
   introduce: String,
   workplace: [String],
   experience: [String],
