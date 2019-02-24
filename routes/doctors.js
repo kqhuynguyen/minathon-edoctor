@@ -60,13 +60,13 @@ router.patch('/schedules/add',async(ctx,next)=>{
   const id_patient=ctx.query.patient_id;
   const date=ctx.query.date;
   const time=ctx.query.time;
-  Doctor.update({_id:id_doctor},{$push:{
+  await Doctor.update({_id:id_doctor},{$push:{
     schedules:{
       patient_id: id_patient,
       date: new Date(`${date}T${time}`),
       status: 0
     }
-  }});
+  }},{upsert:true});
 });
 
 module.exports = router;
