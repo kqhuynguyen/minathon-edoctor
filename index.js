@@ -1,9 +1,11 @@
 const render = require('./lib/render');
+const cors = require('cors');
 const logger = require('koa-logger');
 const router = require('koa-router')();
 const koaBody = require('koa-body');
 
 const Koa = require('koa');
+
 const app = module.exports = new Koa();
 
 // "database"
@@ -17,6 +19,8 @@ app.use(logger());
 app.use(render);
 
 app.use(koaBody());
+
+app.use(cors());
 
 // route definitions
 
@@ -32,7 +36,7 @@ app.use(router.routes());
  */
 
 async function list(ctx) {
-  await ctx.render('list', { posts: posts });
+  await ctx.render('list', { posts });
 }
 
 /**
@@ -51,7 +55,7 @@ async function show(ctx) {
   const id = ctx.params.id;
   const post = posts[id];
   if (!post) ctx.throw(404, 'invalid post id');
-  await ctx.render('show', { post: post });
+  await ctx.render('show', { post });
 }
 
 /**

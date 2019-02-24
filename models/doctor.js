@@ -1,29 +1,30 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
+const ObjectId = Schema.Types.ObjectId;
 
 const DoctorSchema = new Schema({
   _id: ObjectId,
   name: String,
   role: [String],
   photo: String,
-  faculty: [{type:Schema.ObjectId,ref:'falcuty'}],
+  falcuty: [{type:ObjectId, ref: 'falcuties'}],
   introduce: String,
   workplace: [String],
   experience: [String],
   office_address: [String],
-  });
+  ratings: {
+    num: Number,
+    avg: Number
+  },
+  feedbacks: [
+    {
+      patientId: { type: ObjectId, ref: 'Patient' },
+      content: String
+    }
+  ]
+});
 
 
-DoctorSchema.virtual('keys',
-  {
-    ref:'falcuty',
-    localField:'falcuty',
-    foreignField:'falcutyID',
-    justOne:true
-  }
-)
-DoctorSchema.set('toObject', { virtuals: true });
-const Doctor = mongoose.model('doctor', DoctorSchema);
+const Doctor = mongoose.model('doctors', DoctorSchema);
 module.exports = Doctor;

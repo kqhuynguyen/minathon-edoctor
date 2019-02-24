@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
- 
+const ObjectId = Schema.Types.ObjectId;
+
 const PatientSchema = new Schema({
   _id: ObjectId,
   name: String,
@@ -12,10 +12,10 @@ const PatientSchema = new Schema({
     height: Number,
     birthyear: Number,
     disabilities: [String],
-    diseasesRecord: [String],
+    diseasesRecord: [String]
   }
 });
 
 
-const Patient = mongoose.model('patient', PatientSchema);
+const Patient = mongoose.model('Patient', PatientSchema);
 module.exports = Patient;
