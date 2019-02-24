@@ -16,6 +16,24 @@ router.get('/', async (ctx, next) => {
   });
 });
 
+router.post('/', async (ctx, next) => {
+  body = ctx.request.body;
+  await Appointment.create({  
+    start: body.start,
+    end: body.end,
+    location: body.location,
+    patientId: body.patientId,
+    doctorId: body.doctorId,
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+      ctx.throw(400)
+    }
+    ctx.body = doc;
+  });
+});
+
+
 router.get('/bar', (ctx, next) => {
   ctx.body = 'this is a appointments/bar response';
 });

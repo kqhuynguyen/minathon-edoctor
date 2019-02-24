@@ -26,7 +26,6 @@ router.get('/who', async (ctx, next) => {
   }
   const regex = new RegExp(keyword, 'i');
   await Doctor.find().or([
-    { 'falcuty': regex },
     { 'name': regex },
     { 'role': regex },
     { 'introduce': regex },
@@ -38,7 +37,7 @@ router.get('/who', async (ctx, next) => {
       ctx.body = docs;
     })
     .catch((error) => {
-      console.log(err);
+      console.log(error);
       ctx.throw(400);
     });
 });

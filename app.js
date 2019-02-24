@@ -13,6 +13,7 @@ const diseases = require('./routes/diseases');
 const falcuties = require('./routes/falcuties');
 const appointments = require('./routes/appointments');
 const mongoose = require('mongoose');
+const cors = require('@koa/cors');
 
 const app = new Koa();
 
@@ -28,7 +29,7 @@ app.use(bodyparser({
 app.use(json());
 app.use(logger());
 app.use(require('koa-static')(`${__dirname}/public`));
-
+app.use(cors());
 app.use(views(`${__dirname}/views`, {
   extension: 'pug'
 }));
